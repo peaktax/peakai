@@ -1,9 +1,11 @@
 import { GoogleGenAI } from "@google/genai";
 import { Citation, SearchResult, UploadedFile, SEOMetadata, AuthorProfile } from "../types";
 
-// Use process.env.API_KEY as per Google GenAI SDK guidelines.
-// Assuming the environment injects this variable correctly.
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// CRITICAL FIX: Use import.meta.env for Vite compatibility. 
+// process.env causes a crash in the browser.
+const apiKey = import.meta.env.VITE_API_KEY;
+
+const ai = new GoogleGenAI({ apiKey: apiKey || 'DUMMY_KEY_FOR_BUILD' });
 
 /**
  * Helper to clean and parse JSON from AI responses.
