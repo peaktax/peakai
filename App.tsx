@@ -54,8 +54,8 @@ const App: React.FC = () => {
   // Check authentication
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // VITE_APP_PASSWORD is set in Vercel Environment Variables
-    const correctPassword = process.env.VITE_APP_PASSWORD || 'admin123';
+    // CRITICAL FIX: Use import.meta.env instead of process.env
+    const correctPassword = import.meta.env.VITE_APP_PASSWORD || 'admin123';
     if (passwordInput === correctPassword) {
       setIsAuthenticated(true);
     } else {
