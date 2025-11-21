@@ -1,7 +1,8 @@
 import { GoogleGenAI } from "@google/genai";
 import { Citation, SearchResult, UploadedFile, SEOMetadata, AuthorProfile } from "../types";
 
-// Use process.env.API_KEY. vite.config.ts maps this to VITE_API_KEY.
+// Use process.env.API_KEY as per Google GenAI SDK guidelines.
+// Assuming the environment injects this variable correctly.
 const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
 
 /**
@@ -222,20 +223,21 @@ export const generateBlogContent = async (
     
     // E-E-A-T ENHANCEMENT: Author Box
     const authorBoxHTML = `
-    <div style="background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 0.5rem; margin-top: 2rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: start;">
+    <div class="author-box">
        <div style="flex: 1;">
-          <h4 style="margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #0f172a; font-weight: 700;">About the Author</h4>
-          <p style="margin: 0; color: #334155; font-weight: 600;">${author.name}, ${author.credentials}</p>
-          <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #64748b; line-height: 1.5;">${author.bio}</p>
+          <h4>About the Author</h4>
+          <p class="name">${author.name}, ${author.credentials}</p>
+          <p class="bio">${author.bio}</p>
        </div>
     </div>
     `;
 
     const disclaimerHTML = `
-    <hr style="border: 0; border-top: 1px solid #e2e8f0; margin: 2rem 0;" />
-    <p style="font-size: 0.85rem; color: #64748b; font-style: italic;">
+    <div class="disclaimer-box">
+    <p>
       <strong>Disclaimer:</strong> The information provided in this article is for educational and informational purposes only and does not constitute professional financial or tax advice. Tax laws are subject to change. We recommend consulting with a qualified tax professional regarding your specific situation.
     </p>
+    </div>
     `;
 
     return text + authorBoxHTML + disclaimerHTML;
