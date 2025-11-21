@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="description" content="Generate E-E-A-T compliant tax articles powered by real-time IRS data, advanced AI reasoning, and strict fact-checking." />
+    <title>PEAKtax AI - Simplify US Tax Complexity</title>
+    <link rel="manifest" href="/manifest.json" />
+    <!-- Using CDN for Tailwind to keep configuration simple without extra build steps for the CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      .animate-pulse-slow {
+        animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+      }
+
+      /* Scoped styling for the Generated Blog Content Preview */
+      .blog-content h1 { font-size: 2.25rem; font-weight: 800; margin-bottom: 1.5rem; color: #0f172a; line-height: 1.2; letter-spacing: -0.025em; }
+      .blog-content h2 { font-size: 1.875rem; font-weight: 700; margin-top: 2.5rem; margin-bottom: 1rem; color: #1e293b; padding-bottom: 0.5rem; border-bottom: 1px solid #f1f5f9; }
+      .blog-content h3 { font-size: 1.5rem; font-weight: 600; margin-top: 2rem; margin-bottom: 0.75rem; color: #334155; }
+      .blog-content p { margin-bottom: 1.5rem; line-height: 1.8; color: #334155; font-size: 1.125rem; }
+      .blog-content ul, .blog-content ol { margin-bottom: 1.5rem; padding-left: 1.5rem; color: #334155; font-size: 1.125rem; }
+      .blog-content ul { list-style-type: disc; }
+      .blog-content ol { list-style-type: decimal; }
+      .blog-content li { margin-bottom: 0.5rem; padding-left: 0.5rem; }
+      .blog-content blockquote { border-left: 4px solid #3b82f6; padding: 1.5rem; margin: 2rem 0; font-style: italic; color: #1e293b; background-color: #eff6ff; border-radius: 0 0.5rem 0.5rem 0; }
+      .blog-content table { width: 100%; border-collapse: collapse; margin: 2rem 0; font-size: 1rem; table-layout: fixed; }
+      .blog-content th { background-color: #f8fafc; text-align: left; padding: 1rem; font-weight: 600; color: #475569; border: 1px solid #e2e8f0; }
+      .blog-content td { padding: 1rem; border: 1px solid #e2e8f0; color: #334155; word-wrap: break-word; }
+      .blog-content code { background-color: #f1f5f9; padding: 0.2rem 0.4rem; border-radius: 0.25rem; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; font-size: 0.9em; color: #db2777; border: 1px solid #e2e8f0; }
+      .blog-content pre { background-color: #1e293b; padding: 1.5rem; border-radius: 0.75rem; overflow-x: auto; margin-bottom: 2rem; color: #e2e8f0; }
+      .blog-content pre code { background-color: transparent; color: inherit; padding: 0; border: none; }
+      .blog-content a { color: #2563eb; text-decoration: underline; text-underline-offset: 4px; transition: color 0.2s; }
+      .blog-content a:hover { color: #1d4ed8; }
+
+      /* E-E-A-T Author & Disclaimer Box Styling - Keeping HTML Flat & Fast */
+      .author-box { background-color: #f8fafc; border: 1px solid #e2e8f0; padding: 1.5rem; border-radius: 0.5rem; margin-top: 2rem; margin-bottom: 2rem; display: flex; gap: 1rem; align-items: start; }
+      .author-box h4 { margin: 0 0 0.5rem 0; font-size: 1.1rem; color: #0f172a; font-weight: 700; }
+      .author-box p.name { margin: 0; color: #334155; font-weight: 600; }
+      .author-box p.bio { margin: 0.5rem 0 0 0; font-size: 0.9rem; color: #64748b; line-height: 1.5; }
+      
+      .disclaimer-box { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e2e8f0; }
+      .disclaimer-box p { font-size: 0.85rem; color: #64748b; font-style: italic; margin: 0; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

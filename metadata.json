@@ -1,0 +1,5 @@
+{
+  "name": "Copy of PEAKtax AI",
+  "description": "A professional US Taxation blog generator using Google Search for live fact-checking and Gemini 3.0 Thinking mode for complex tax reasoning.",
+  "requestFramePermissions": []
+}
